@@ -1,0 +1,32 @@
+.error_div img{
+    width: 1300px;
+}
+
+.error_div{
+    text-align: center;
+}
+
+.white_div_cover{
+    background-color: white;
+    height: 100px;
+    position: absolute;
+    width: 100vw;
+    top: 600px;
+    left: 0;
+    z-index: 999;
+}
+
+.back_btn_error{
+    position: absolute;
+    top: 630px;
+    left: 650px;
+    z-index: 9999;
+    padding: 15px 30px;
+    background-color: orange;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    border: 1px solid white;
+    cursor: pointer;
+
+}

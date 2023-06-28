@@ -1,0 +1,38 @@
+.nav_div{
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.407);
+}
+
+.nav_div ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    column-gap: 200px;
+    margin-right: 50px;
+    align-items: center;
+}
+
+.nav_div ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    padding: 15px;
+    color: black;
+    letter-spacing: 2px;
+    font-style:italic;
+}
+
+.nav_div ul li  .active{
+    /* border-bottom: 1px solid black; */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    
+}
+
+.nav_div ul li a:hover{
+    color: rgb(169, 158, 142);
+}
+
+.nav_div ul img{
+    width: 150px;
+    margin-right: 150px;
+    cursor: pointer;
+}

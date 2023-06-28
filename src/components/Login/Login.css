@@ -1,0 +1,21 @@
+.form_log a{
+    color: grey;
+    font-style: italic;
+    cursor: pointer;
+    margin-right: -90px;
+}
+
+.input_div_log_2{
+    padding-bottom: 15px;
+}
+
+.form_log button{
+    margin-top: 40px;
+}
+
+.goReg_div{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    align-items: center;
+}
