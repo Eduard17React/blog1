@@ -3,9 +3,11 @@ import * as yup from 'yup'
 import './Registre.css'
 import { useNavigate } from 'react-router-dom'
 import { IMAGES } from '../../img'
+import customAxios from '../../axios'
 
 
-const RegForm = ({data, setData, setPage}) => {
+const RegForm = () => {
+    const navigate = useNavigate()
 
     const validationSchema = yup.object().shape({
         name: yup.string().typeError('Must be String').required('Is mandatory'),
@@ -14,7 +16,6 @@ const RegForm = ({data, setData, setPage}) => {
         confirmPassword: yup.string().typeError('Must be String').oneOf([yup.ref('password')], 'Passwords do not match').required('Is mandatory'),
     })
 
-    const navigate = useNavigate()
 
     const handleClickHome = () => {
         navigate('/')
@@ -32,18 +33,18 @@ const RegForm = ({data, setData, setPage}) => {
 
             validateOnBlur
 
-            onSubmit={(values) => {
-                setData([
-                    ...data,
-                    {
-                        ...values
-                    }
-                ])
-                setPage('log')
-                console.log(data)}
-                
-                
-            }
+            onSubmit={ async (values, { resetForm }) => {
+                try {
+                    const res = await customAxios.post('/users', values)
+                    resetForm()
+                    navigate('/auth/login')
+                    // console.log(res)
+                } catch (error) {
+                    console.log(error)
+                    
+                }
+                 
+            }}
             
             validationSchema={validationSchema}
             

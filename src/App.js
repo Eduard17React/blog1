@@ -9,30 +9,36 @@ import Registre from './components/Registre/Registre';
 import Error from './components/page/Error/Error';
 import UniqePage from './components/UniqePage/UniqePage';
 import EditUniqePage from './components/EditUniqePage/EditUniqePage';
+import { useState } from 'react';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null)
+
   return (
     <div className="App">
       
       <Routes>
-        <Route path='/' element={<HomeWrapper />}>
-          <Route index element={<Home />} />
-          <Route path='myposts' element={<MyPosts />} />
-          <Route path='newposts' element={<NewPosts />} />
-          <Route path='login' element={<Login />} />
+        <Route path='/' element={<HomeWrapper {...{ setCurrentUser, currentUser }} />}>
+          <Route index element={<Home {...{ currentUser }} />} />
+          <Route path='myposts' element={<MyPosts {...{ currentUser }} />} />
+          <Route path='newposts' element={<NewPosts {...{ currentUser }} />} />
+
+          <Route path='uniqe'>
+            <Route path='uniqepage/:id' element={<UniqePage {...{ currentUser }} />} />
+            <Route path='edituniqepage/:id' element={<EditUniqePage />} />
+        </Route>
+        
         </Route>
 
-        <Route path='uniq'>
-          <Route path='show/:id' element={<UniqePage />} />
-          <Route path='edit/:id' element={<EditUniqePage />} />
-        </Route>
+        
 
         <Route path='auth'>
-          <Route path='login' element={<Login />} />
+          <Route path='login' element={<Login {...{currentUser, setCurrentUser}} />} />
           <Route path='registre' element={<Registre />} />
         </Route>
 
         <Route path='*' element={<Error />} />
+        
       </Routes>
     </div>
   );

@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "name": "Eduard",
+      "email": "eduardhovhannisyan@inbox.ru",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 2
+    },
+    {
+      "name": "shmavon",
+      "email": "shm@mail.ru",
+      "password": "777",
+      "confirmPassword": "777",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "userId": 1,
+      "title": "React",
+      "body": "React lets you build user interfaces out of individual pieces called components. Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "author": "Eduard",
+      "title": "Redux",
+      "body": "Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to (and inspired by) Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark. Since mid-2016, the primary maintainers are Mark Erikson and Tim Dorr.\n",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "author": "Eduard",
+      "title": "Java Script",
+      "body": "JavaScript (/ˈdʒɑːvəskrɪpt/), often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "author": "shmavon",
+      "title": "Yerevan",
+      "body": "Yerevan (UK: /ˌjɛrəˈvæn/ YERR-ə-VAN, US: /-ˈvɑːn/ -⁠VAHN, Armenian: Երևան[a] [jɛɾɛˈvɑn] (listen), sometimes spelled Erevan)[b] is the capital and largest city of Armenia and one of the world's oldest continuously inhabited cities.[23] Situated along the Hrazdan River, Yerevan is the administrative, cultural, and industrial center of the country, as its primate city. It has been the capital since 1918, the fourteenth in the history of Armenia and the seventh located in or around the Ararat Plain. ",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

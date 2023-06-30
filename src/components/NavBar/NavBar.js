@@ -3,11 +3,18 @@ import './NavBar.css'
 import { IMAGES } from '../../img'
 
 
-const NavBar = () => {
+const NavBar = ({setCurrentUser}) => {
+
     const navigate = useNavigate()
+
     const handleClick = () => {
         navigate('/')
     }
+
+    const handleClickOut = () => {
+      setCurrentUser(null)
+    }
+
   return (
     <div className='nav_div'>
         <ul>
@@ -16,7 +23,7 @@ const NavBar = () => {
             <li><NavLink to={'/'}>Home</NavLink></li>
             <li><NavLink to={'/myposts'}>Posts</NavLink></li>
             <li><NavLink to={'/newposts'}>Add</NavLink></li>
-            <li><NavLink to={'/login'}>Login</NavLink></li>
+            <button className='btn_out' onClick={handleClickOut}>Log Out</button>
         </ul>
     </div>
   )
